@@ -10,6 +10,11 @@
             FizzBuzz(100);
             Console.WriteLine("FizzBuzz2 without modulo Test");
             FizzBuzz2();
+            Console.WriteLine("Generate Ten Random Number String Test");
+            for (int r = 0; r < GenerateRandomNumberString().Length; r++)
+            {
+                Console.WriteLine(GenerateRandomNumberString()[r]);
+            }
         }
 
         //A program that prints all the values from 1-255
@@ -48,6 +53,7 @@
             }
         }
 
+        //Program that prints value, Fizz(multiply of 3), Buzz(multiply of 5), or FizzBuzz(multiply of 3 & 5), between range 1 to 150
         static void FizzBuzz2()
         {
             const string FIZZ = "Fizz";
@@ -73,6 +79,47 @@
                 Console.WriteLine(++k);
                 Console.WriteLine(FIZZBUZZ); ++k;
             }
+        }
+
+        //Generate 10 random values and output the respective word, in relation to step three, for the generated values
+        static string[] GenerateRandomNumberString()
+        {
+
+            Random rand = new Random();
+
+            Dictionary<int, string> Values_Dict = new Dictionary<int, string>();
+            Values_Dict.Add(1, "One");
+            Values_Dict.Add(2, "Two");
+            Values_Dict.Add(3, "Three");
+            Values_Dict.Add(4, "Four");
+            Values_Dict.Add(5, "Five");
+            Values_Dict.Add(6, "Six");
+            Values_Dict.Add(7, "Seven");
+            Values_Dict.Add(8, "Eight");
+            Values_Dict.Add(9, "Nine");
+            Values_Dict.Add(10, "Ten");
+            Values_Dict.Add(11, "Eleven");
+            Values_Dict.Add(12, "Tweleve");
+            Values_Dict.Add(13, "Thirteen");
+            Values_Dict.Add(14, "Fourteen");
+            Values_Dict.Add(15, "Fiveteen");
+            Values_Dict.Add(16, "Sixteen");
+            Values_Dict.Add(17, "Seventeen");
+            Values_Dict.Add(18, "Eightteen");
+            Values_Dict.Add(19, "Nineteen");
+            Values_Dict.Add(20, "Twenty");
+
+            string[] resultArr = new string[10];
+            for (int x = 0; x < resultArr.Length; x++)
+            {
+                int temp = rand.Next(1, 21);
+                if (Values_Dict.ContainsKey(temp))
+                {
+                    resultArr[x] = Values_Dict[temp];
+                }
+            }
+
+            return resultArr;
         }
     }
 }
