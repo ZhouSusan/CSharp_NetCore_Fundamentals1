@@ -108,11 +108,21 @@
             Values_Dict.Add(18, "Eightteen");
             Values_Dict.Add(19, "Nineteen");
             Values_Dict.Add(20, "Twenty");
+            Values_Dict.Add(21, "Twenty-One");
+            Values_Dict.Add(22, "Twenty-Two");
+            Values_Dict.Add(23, "Twenty-Three");
+            Values_Dict.Add(24, "Twenty-Four");
+            Values_Dict.Add(25, "Twenty-Five");
+            Values_Dict.Add(26, "Twenty-Six");
+            Values_Dict.Add(27, "Twenty-Seven");
+            Values_Dict.Add(28, "Twenty-Eight");
+            Values_Dict.Add(29, "Twenty-Nine");
+            Values_Dict.Add(30, "Thirty");
 
             string[] resultArr = new string[10];
             for (int x = 0; x < resultArr.Length; x++)
             {
-                int temp = rand.Next(1, 21);
+                int temp = rand.Next(1, 31);
                 if (Values_Dict.ContainsKey(temp))
                 {
                     resultArr[x] = Values_Dict[temp];
