@@ -8,6 +8,8 @@
             PrintAllValues(255);
             Console.WriteLine("FizzBuzz Test");
             FizzBuzz(100);
+            Console.WriteLine("FizzBuzz2 without modulo Test");
+            FizzBuzz2();
         }
 
         //A program that prints all the values from 1-255
@@ -43,6 +45,33 @@
                 {
                     Console.WriteLine(j);
                 }
+            }
+        }
+
+        static void FizzBuzz2()
+        {
+            const string FIZZ = "Fizz";
+            const string BUZZ = "Buzz";
+            const string FIZZBUZZ = "FizzBuzz";
+
+            int k = 0;
+            while (k < 150)
+            {
+                Console.WriteLine(++k);
+                Console.WriteLine(++k);
+                Console.WriteLine(FIZZ); ++k;
+                Console.WriteLine(++k);
+                Console.WriteLine(BUZZ); ++k;
+                Console.WriteLine(FIZZ); ++k;
+                Console.WriteLine(++k);
+                Console.WriteLine(++k);
+                Console.WriteLine(FIZZ); ++k;
+                Console.WriteLine(BUZZ); ++k;
+                Console.WriteLine(++k);
+                Console.WriteLine(FIZZ); ++k;
+                Console.WriteLine(++k);
+                Console.WriteLine(++k);
+                Console.WriteLine(FIZZBUZZ); ++k;
             }
         }
     }
